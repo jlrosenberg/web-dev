@@ -1,0 +1,110 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #000000;
+  font-family: Roboto;
+  color: #ffffff;
+}
+
+.root {
+  padding: 32px;
+}
+
+.search-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  background-color: #212327;
+  border-radius: 12px;
+  width: -webkit-fill-available;
+  height: 44px;
+  /* get rid of dumb browser defaults */
+  border: 0px;
+  padding: 8px 12px;
+  color: #ffffff;
+}
+.settings-cog {
+  color: #1e9be8;
+  cursor: pointer;
+  margin: 4px 16px;
+  padding: 4px 0px;
+  font-size: 24px !important;
+}
+
+.tabs-container {
+  display: flex;
+  justify-content: space-between;
+  /* padding: 16px; */
+  font-size: 15px;
+  margin-right: 16px;
+  align-items: center;
+  border-bottom: 2px solid #2F3336;
+}
+
+.tab {
+  cursor: pointer;
+  font-weight: 700;
+  color: #6D767C;
+}
+
+.tab.selected {
+  color: #1DA2F1;
+  padding: 16px;
+  border-bottom: 4px solid #1DA2F1;
+}
+.divider {
+  height: 8px;
+  background-color: #16181D;
+  margin-right: 16px;
+}
+
+.posts-container{
+  margin-right: 16px;
+}
+.post{
+  border: 1px solid #2F3336;
+  padding: 16px;
+
+
+}
+.post .title {
+  margin-bottom: 6px;
+}
+
+.post .topic {
+  color: #6D767C;
+  font-size: 13px;
+  margin-bottom:4px;
+}
+.post .tuit-count {
+  color: #6D767C;
+  font-size: 13px;
+}
+.post.post-with-image{
+  display: flex;
+  justify-content: space-between;
+}
+
+.post .first-line {
+  display: flex;
+  color: #6D767C;
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+
+.post .first-line .author {
+  color: #ffffff;
+}
+
+.post .first-line .timestamp {
+  margin-left: 6px;
+}
+
+.rounded-post-image {
+  border-radius: 12px;
+  height: 100px;
+  width: 100px;
+}
