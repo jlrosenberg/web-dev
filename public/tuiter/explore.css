@@ -1,110 +1,47 @@
 body {
-  padding: 0;
-  margin: 0;
-  background-color: #000000;
-  font-family: Roboto;
-  color: #ffffff;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif
 }
 
-.root {
-  padding: 32px;
+.has-search .form-control {
+    padding-left: 2.375rem;
 }
 
-.search-container {
-  width: 100%;
-  display: flex;
-  align-items: center;
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaaaaa;
 }
 
-.search-bar {
-  background-color: #212327;
-  border-radius: 12px;
-  width: -webkit-fill-available;
-  height: 44px;
-  /* get rid of dumb browser defaults */
-  border: 0px;
-  padding: 8px 12px;
-  color: #ffffff;
-}
 .settings-cog {
-  color: #1e9be8;
-  cursor: pointer;
-  margin: 4px 16px;
-  padding: 4px 0px;
-  font-size: 24px !important;
+    font-size: 24px;
 }
 
-.tabs-container {
-  display: flex;
-  justify-content: space-between;
-  /* padding: 16px; */
-  font-size: 15px;
-  margin-right: 16px;
-  align-items: center;
-  border-bottom: 2px solid #2F3336;
+.image-overlay-text {
+    color: white; 
+    bottom: 0;
+    position: absolute;
+    font-size: 24px;
 }
 
-.tab {
-  cursor: pointer;
-  font-weight: 700;
-  color: #6D767C;
-}
-
-.tab.selected {
-  color: #1DA2F1;
-  padding: 16px;
-  border-bottom: 4px solid #1DA2F1;
-}
-.divider {
-  height: 8px;
-  background-color: #16181D;
-  margin-right: 16px;
-}
-
-.posts-container{
-  margin-right: 16px;
-}
-.post{
-  border: 1px solid #2F3336;
-  padding: 16px;
-
+.post-topic {
 
 }
-.post .title {
-  margin-bottom: 6px;
+
+.light-gray-font {
+    color: #818181
 }
 
-.post .topic {
-  color: #6D767C;
-  font-size: 13px;
-  margin-bottom:4px;
-}
-.post .tuit-count {
-  color: #6D767C;
-  font-size: 13px;
-}
-.post.post-with-image{
-  display: flex;
-  justify-content: space-between;
+.profile-img {
+    border-radius: 50%;
 }
 
-.post .first-line {
-  display: flex;
-  color: #6D767C;
-  font-size: 13px;
-  margin-bottom: 6px;
-}
-
-.post .first-line .author {
-  color: #ffffff;
-}
-
-.post .first-line .timestamp {
-  margin-left: 6px;
-}
-
-.rounded-post-image {
-  border-radius: 12px;
-  height: 100px;
-  width: 100px;
+.recommended-profile {
+    justify-content: space-between;
+    align-items: center;
 }

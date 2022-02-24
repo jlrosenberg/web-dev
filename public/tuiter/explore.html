@@ -1,111 +1,302 @@
-<!DOCTYPE html>
 <head>
-  <link rel="stylesheet" href="explore.css" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link href="explore.css" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&display=swap"
     rel="stylesheet"
-  />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
   />
 </head>
-<body class="body">
-  <div class="root">
-    <div class="search-container">
-      <input class="search-bar" type="search" placeholder="Search Tuiter" />
-      <a href="./explore-settings.html"
-        ><i class="fa fa-gear settings-cog"></i
-      ></a>
-    </div>
-    <div class="tabs-container">
-      <div class="tab selected">For you</div>
-      <div class="tab">Trending</div>
-      <div class="tab">COVID-19</div>
-      <div class="tab">News</div>
-      <div class="tab">Sports</div>
-      <div class="tab">Entertainment</div>
-    </div>
-    <div class="divider"></div>
-    <div class="posts-container">
-      <div class="post suggested-post">
-        <div class="topic">Trending in Science</div>
-        <div class="title">Starship</div>
-        <div class="tuit-count">55.5k Tuits</div>
-      </div>
-      <div class="post suggested-post">
-        <div class="topic">Sports • Trending</div>
-        <div class="title">Joe Rogan</div>
-        <div class="tuit-count">5,218 Tuits</div>
-      </div>
+<body>
+  <div class="m-4">
+    <div class="row">
+      <div class="col col-2 offset-xxl-1 offset-xl-1">
+        <ul class="list-group">
+          <li class="list-group-item">
+            <i class="fab fa-twitter"> </i>
+          </li>
+          <a class="list-group-item" href="/home.html">
+            <i class="fas fa-home"> </i>
+            <span class="d-none d-xl-inline p-2">Home</span>
+          </a>
+          <a class="list-group-item active" href="#">
+            <i class="fas fa-hashtag"> </i>
+            <span class="d-none d-xl-inline p-2">Explore</span>
+          </a>
 
-      <div class="post post-with-image">
-        <div>
-          <div class="first-line">
-            <div class="author">The New York Times</div>
-            <div class="timestamp">• &nbsp;Yesterday</div>
-          </div>
-          <div class="title">
-            CNN's Cuomo Conundrum: A star anchor with a brother in trouble
-          </div>
-        </div>
-        <div>
-          <img class="rounded-post-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png"></img>
-        </div>
+          <a class="list-group-item" href="./notifications.html">
+            <i class="fas fa-bell"> </i>
+            <span class="d-none d-xl-inline p-2">Notifications</span>
+          </a>
+          <a class="list-group-item" href="./messages.html">
+            <i class="fas fa-envelope"> </i>
+            <span class="d-none d-xl-inline p-2">Messages</span>
+          </a>
+          <a class="list-group-item" href="./bookmarks.html">
+            <i class="fas fa-bookmark"> </i>
+            <span class="d-none d-xl-inline p-2">Bookmarks</span>
+          </a>
+          <a class="list-group-item" href="./lists.html">
+            <i class="fas fa-list"> </i>
+            <span class="d-none d-xl-inline p-2">Lists</span>
+          </a>
+          <a class="list-group-item" href="./profile.html">
+            <i class="fas fa-user"> </i>
+            <span class="d-none d-xl-inline p-2">Profile</span>
+          </a>
+          <a class="list-group-item" href="./more.html">
+            <i class="fas fa-ellipsis-h"> </i>
+            <span class="d-none d-xl-inline p-2">More</span>
+          </a>
+        </ul>
+
+        <button class="btn btn-primary rounded-pill w-100 mt-2">Tueet</button>
       </div>
+      <div class="col col-lg-5 col-9">
+        <div class="row mb-2">
+          <div class="col-11">
+            <div class="form-group has-search">
+              <span class="fa fa-search form-control-feedback"> </span>
+              <input
+                type="text"
+                class="form-control rounded-pill"
+                placeholder="Search Tuiter"
+              />
+            </div>
+          </div>
+          <div class="col-1">
+            <a href="#"> <i class="fa fa-cog settings-cog mt-1"> </i> </a>
+          </div>
+        </div>
 
-      <div class="post post-with-image">
-        <div>
-          <div class="first-line">
-            <div class="topic">COVID-19</div>
-            <div class="timestamp">• &nbsp;LIVE</div>
-          </div>
-          <div class="title">
-            COVID-19: News and updates for Massachussetts
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">For You</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Trending</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Sports</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Entertainment</a>
+          </li>
+        </ul>
+        <div class="card mt-2">
+          <div class="image-container">
+            <img
+              src="https://media.istockphoto.com/photos/space-shuttle-in-the-rays-of-sun-picture-id1131418344?k=20&m=1131418344&s=612x612&w=0&h=yPyqDj2LYNbPNr8e69PQGm3LZZVTUWU0tjHzDsDl7YU="
+              class="card-img-top"
+            />
+            <div class="card-img-overlay">
+              <div class="image-overlay-text">SpaceX's Starship</div>
+            </div>
           </div>
         </div>
-        <div>
-          <img class="rounded-post-image" src="https://www.history.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_768/MTU3ODc5MjU1MDA1NDcyNDc5/faneuil-hall-marketplace-and-the-town-as-seen-from-bostonian-hotel.jpg"></img>
-        </div>
-      </div> 
 
-      <div class="post post-with-image">
-        <div>
-          <div class="first-line">
-            <div class="author">Bloomberg Opinion</div>
-            <div class="timestamp">• &nbsp;Yesterday</div>
-          </div>
-          <div class="title">
-            Thinking about getting a booster? Read this first.
-          </div>
-        </div>
-        <div>
-          <img class="rounded-post-image" src="https://www.schengenvisainfo.com/news/wp-content/uploads/2022/01/COVID-vaccine-booster.jpg"></img>
-        </div>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col-10">
+                <div class="post-topic light-gray-font">Web Development</div>
+                <div>
+                  <strong>React.js</strong>
+                  <i class="fas fa-check-circle"> </i>
+                  <span class="light-gray-font">&nbsp;· 2h</span>
+                </div>
+                <div>
+                  <strong>
+                    React.js is a component based frontend library that makes it
+                    very easy to build Single Page Applications or SPAs
+                  </strong>
+                </div>
+              </div>
+              <div class="col-2">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/2300px-React-icon.svg.png"
+                  class="img-fluid"
+                  style="min-width: 100%"
+                />
+              </div>
+            </div>
+          </li>
+
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col-10">
+                <div>
+                  <strong>Javascript</strong>
+                  <i class="fas fa-check-circle"> </i>
+                  <span class="light-gray-font">&nbsp;· 2h</span>
+                </div>
+                <div>
+                  <strong>
+                    Javascript is a programming language that is used to make
+                    webpages interactive
+                  </strong>
+                </div>
+                <div class="light-gray-font">123k tueets</div>
+              </div>
+              <div class="col-2">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+                  class="img-fluid"
+                  style="min-width: 100%"
+                />
+              </div>
+            </div>
+          </li>
+
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col-10">
+                <div class="post-topic light-gray-font">Web Development</div>
+                <div>
+                  <strong>jQuery</strong>
+                </div>
+                <div class="light-gray-font">123k tueets</div>
+              </div>
+              <div class="col-2">
+                <img
+                  src="https://openjsf.org/wp-content/uploads/sites/84/2019/10/jquery-logo-vertical_large_square.png"
+                  class="img-fluid"
+                  style="min-width: 100%"
+                />
+              </div>
+            </div>
+          </li>
+
+          <li class="list-group-item">
+            <div class="row">
+              <div class="col-10">
+                <div class="post-topic light-gray-font">Web Development</div>
+                <div>
+                  <strong>NodeJS</strong>
+                  <i class="fas fa-check-circle"> </i>
+                  <span class="light-gray-font">&nbsp;· 2h</span>
+                </div>
+                <div class="light-gray-font">123k tueets</div>
+              </div>
+              <div class="col-2">
+                <img
+                  src="https://ih1.redbubble.net/image.1637717834.1604/pp,840x830-pad,1000x1000,f8f8f8.u1.jpg"
+                  class="img-fluid"
+                  style="min-width: 100%"
+                />
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
-      <div class="post suggested-post">
-        <div class="topic">Trending in the United States</div>
-        <div class="title">Wonderbread</div>
-        <div class="tuit-count">1,259 Tuits</div>
+      <div
+        class="d-none d-lg-block d-xl-block d-xxl-block col-lg-3"
+      >
+        <ul class="list-group">
+          <li class="list-group-item"><strong>Who to follow?</strong></li>
+          <li class="list-group-item">
+            <div class="d-flex recommended-profile">
+                <div style="display: flex">
+                    <div style="width: 50px;">
+                        <img
+                          src="https://cdn.iconscout.com/icon/free/png-256/java-60-1174953.png"
+                          class="img img-fluid profile-img"
+                        />
+                      </div>
+                      <div style="display: flex; align-items: center; flex-direction:column;">
+                        <div>
+                          Java <i class="fas fa-check-circle"> </i>
+                        </div>
+                        <div>@java</div>
+                      </div>
+                </div>
+              
+              <div>
+                <button class="btn btn-primary rounded-pill">Follow</button>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="d-flex recommended-profile">
+                <div style="display: flex">
+                    <div style="width: 50px;">
+                        <img
+                          src="https://cdn.iconscout.com/icon/free/png-256/java-60-1174953.png"
+                          class="img img-fluid profile-img"
+                        />
+                      </div>
+                      <div style="display: flex; align-items: center; flex-direction:column;">
+                        <div>
+                          Java <i class="fas fa-check-circle"> </i>
+                        </div>
+                        <div>@java</div>
+                      </div>
+                </div>
+              
+              <div>
+                <button class="btn btn-primary rounded-pill">Follow</button>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="d-flex recommended-profile">
+                <div style="display: flex">
+                    <div style="width: 50px;">
+                        <img
+                          src="https://cdn.iconscout.com/icon/free/png-256/java-60-1174953.png"
+                          class="img img-fluid profile-img"
+                        />
+                      </div>
+                      <div style="display: flex; align-items: center; flex-direction:column;">
+                        <div>
+                          Java <i class="fas fa-check-circle"> </i>
+                        </div>
+                        <div>@java</div>
+                      </div>
+                </div>
+              
+              <div>
+                <button class="btn btn-primary rounded-pill">Follow</button>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item">
+            <div class="d-flex recommended-profile">
+                <div style="display: flex">
+                    <div style="width: 50px;">
+                        <img
+                          src="https://cdn.iconscout.com/icon/free/png-256/java-60-1174953.png"
+                          class="img img-fluid profile-img"
+                        />
+                      </div>
+                      <div style="display: flex; align-items: center; flex-direction:column;">
+                        <div>
+                          Java <i class="fas fa-check-circle"> </i>
+                        </div>
+                        <div>@java</div>
+                      </div>
+                </div>
+              
+              <div>
+                <button class="btn btn-primary rounded-pill">Follow</button>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
-
-      <div class="post post-with-image">
-        <div>
-          <div class="first-line">
-            <div class="topic">Election</div>
-            <div class="timestamp">• &nbsp;LIVE</div>
-          </div>
-          <div class="title">
-            2022 Election: Wu elected new mayor of Boston
-          </div>
-        </div>
-        <div>
-          <img class="rounded-post-image" src="https://www.history.com/.image/ar_16:9%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cg_faces:center%2Cq_auto:good%2Cw_768/MTU3ODc5MjU1MDA1NDcyNDc5/faneuil-hall-marketplace-and-the-town-as-seen-from-bostonian-hotel.jpg"></img>
-        </div>
-      </div> 
-
+      <!-- Spacer div for larger layouts since can only offset on left -->
+      <div class="col-xxl col-xl"></div>
     </div>
   </div>
 </body>
