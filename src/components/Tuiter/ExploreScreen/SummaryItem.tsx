@@ -48,7 +48,7 @@ const SummaryItem: React.FC<Props> = ({
         <div className="col-2">
           <img
             src={image}
-            alt="post image"
+            alt="post"
             className="img-fluid"
             style={{minWidth: '100%'}}
           />

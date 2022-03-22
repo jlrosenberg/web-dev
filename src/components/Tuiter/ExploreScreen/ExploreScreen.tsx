@@ -1,6 +1,7 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from "react";
 import PostSummaryList from "./PostSummaryList";
-require('./explore.css')
+require("./explore.css");
 
 const ExploreScreen = () => {
   return (
@@ -56,6 +57,7 @@ const ExploreScreen = () => {
           <img
             src="https://media.istockphoto.com/photos/space-shuttle-in-the-rays-of-sun-picture-id1131418344?k=20&m=1131418344&s=612x612&w=0&h=yPyqDj2LYNbPNr8e69PQGm3LZZVTUWU0tjHzDsDl7YU="
             className="card-img-top"
+            alt="space shutlte"
           />
           <div className="card-img-overlay">
             <div className="image-overlay-text">SpaceX's Starship</div>
