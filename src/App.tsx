@@ -4,18 +4,31 @@ import "./App.css";
 import HelloWorld from "./components/HelloWorld";
 import Labs from "./components/Labs";
 import Tuiter from "./components/Tuiter";
+import ExploreScreen from "./components/Tuiter/ExploreScreen/ExploreScreen";
+import HomeScreen from "./components/Tuiter/HomeScreen/HomeScreen";
 
 const App: React.FC = () => (
   <BrowserRouter>
-    <div className="container">
-      <Routes>
-        <Route path="/hello" element={<HelloWorld />} />
-        <Route path="/labs" element={<Labs />} />
-        <Route path="/tuiter" element={<Tuiter />} />
-        {/* Put this here bc having an empty default is stupid */}
-        <Route path="/" element={<Labs/>} />
-      </Routes>
-    </div>
-  </BrowserRouter>
+  <div className="container">
+    <Routes>
+      <Route path="/">
+        <Route path="labs"
+               element={<Labs/>}/>
+        <Route path="hello"
+               element={<HelloWorld/>}/>
+        <Route path="tuiter"
+               element={<Tuiter/>}>
+          <Route index
+                 element={<HomeScreen/>}/>
+          <Route path="explore"
+                 element={<ExploreScreen/>}/>
+          {/* <Route path="notifications" 
+                 element={<NotificationScreen/>}/> */}
+          ...
+        </Route>
+      </Route>
+    </Routes>
+  </div>
+</BrowserRouter>
 );
 export default App;

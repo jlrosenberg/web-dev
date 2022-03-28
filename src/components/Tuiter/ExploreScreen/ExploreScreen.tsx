@@ -5,7 +5,7 @@ require("./explore.css");
 
 const ExploreScreen = () => {
   return (
-    <div className="col col-lg-5 col-9">
+    <div className="">
       <div className="row mb-2">
         <div className="col-11">
           <div className="form-group has-search">

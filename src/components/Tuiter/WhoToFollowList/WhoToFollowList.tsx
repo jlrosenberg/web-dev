@@ -1,4 +1,4 @@
-import who from "./who";
+import { useAppSelector } from "../store";
 
 interface ListItemProps {
   avatarIcon: string;
@@ -43,11 +43,17 @@ const WhoToFollowListItem: React.FC<ListItemProps> = ({
   </li>
 );
 
-const WhoToFollowList: React.FC = () => (
-  <ul className="list-group">
+const WhoToFollowList: React.FC = () => {
+  const who = useAppSelector(({who}) => who);
+  return(
+    <ul className="list-group">
     {who.map((person) => (
       <WhoToFollowListItem {...person} />
     ))}
   </ul>
-);
+  )
+
+}
+
+
 export default WhoToFollowList;

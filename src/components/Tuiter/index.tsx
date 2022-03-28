@@ -1,10 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import ExploreScreen from "./ExploreScreen/ExploreScreen";
+import { Provider } from "react-redux";
+import { Link, Outlet } from "react-router-dom";
 import NavigationSidebar from "./NavigationSidebar";
+import { store } from "./store";
 import WhoToFollowList from "./WhoToFollowList/WhoToFollowList";
 
 const Tuiter: React.FC = () => (
+  <Provider store={store}>
   <>
     <link
       rel="stylesheet"
@@ -18,12 +20,16 @@ const Tuiter: React.FC = () => (
       <div className="col-2 col-md-2 col-lg-1 col-xl-2">
         <NavigationSidebar />
       </div>
-      <ExploreScreen />
+      <div className="col col-lg-5 col-9">
+      <Outlet />
+      </div>
       <div className="d-sm-none d-md-none d-lg-block col-lg-4 col-xl-4">
         <WhoToFollowList />
       </div>
     </div>
   </>
+  </Provider>
+
 );
 
 export default Tuiter;
