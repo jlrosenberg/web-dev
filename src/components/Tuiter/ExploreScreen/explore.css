@@ -1,0 +1,50 @@
+body {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif
+}
+
+.has-search .form-control {
+  padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaaaaa;
+}
+
+.settings-cog {
+  font-size: 24px;
+}
+
+.image-overlay-text {
+  color: white; 
+  bottom: 0;
+  position: absolute;
+  font-size: 24px;
+}
+
+
+.light-gray-font {
+  color: #818181
+}
+
+.profile-img {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.recommended-profile {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.list-group-item {
+  color: unset;
+}
