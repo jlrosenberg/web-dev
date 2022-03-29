@@ -3,7 +3,7 @@ import { useAppSelector } from '../store';
 import { TuitListItem } from './TuitListItem/TuitListItem';
 
 export const TuitList = () => {
-  const tuits = useAppSelector(({ tuits }) => tuits);
+  const tuits: Array<any> = useAppSelector(({ tuits }) => tuits);
   return (
     <ul className="ttr-tuits list-group">
       {

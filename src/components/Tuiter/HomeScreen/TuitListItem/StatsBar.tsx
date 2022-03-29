@@ -1,6 +1,7 @@
 import classNames from "classnames";
 import React from "react";
 import { makeStyles } from "@mui/styles";
+import { useAppDispatch } from "../../store";
 
 interface Stats {
   comments: number;
@@ -11,6 +12,7 @@ interface Stats {
 interface Props {
   stats: Stats;
   liked: boolean;
+  tuit: any
 }
 
 const useStyles = makeStyles({
@@ -26,9 +28,15 @@ const useStyles = makeStyles({
   },
 });
 
-export const StatsBar: React.FC<Props> = ({ stats, liked }) => {
+export const StatsBar: React.FC<Props> = ({ stats, liked, tuit }) => {
   const classes = useStyles();
+  const dispatch = useAppDispatch();
   const { comments, retuits, likes } = stats;
+
+  const likeTuit = () => {
+    dispatch({type: 'like-tuit', tuit});
+  };
+
   return (
     <div className={classes.container}>
       <span>
@@ -37,7 +45,7 @@ export const StatsBar: React.FC<Props> = ({ stats, liked }) => {
       <span>
         <i className="fa fa-retweet"></i>&nbsp;{retuits}
       </span>
-      <span>
+      <span onClick={likeTuit}>
         <i
           className={classNames("fa fa-heart", { [classes.filledRed]: liked })}
         ></i>
