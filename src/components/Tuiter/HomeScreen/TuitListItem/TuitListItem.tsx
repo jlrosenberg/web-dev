@@ -59,9 +59,11 @@ export const TuitListItem: React.FC<Props> = ({ tuit }) => {
     handle,
     tuit: tuitText,
     stats,
-    postedBy: { username },
+    postedBy,
     attachments,
   } = tuit;
+  const username = postedBy?.username;
+
   const classes = useStyles();
   const dispatch = useAppDispatch();
   // const deleteTuit = (tuit: any) => {
