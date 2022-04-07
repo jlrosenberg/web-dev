@@ -3,6 +3,7 @@ import { useState } from "react";
 import { makeStyles } from "@mui/styles";
 import classNames from "classnames";
 import { useAppDispatch } from "../store";
+import { createTuit } from "../reducers/actions/tuitsActions";
 
 const PROFILE_PIC_URL_TEMP =
   "https://i0.wp.com/www.followchain.org/wp-content/uploads/2021/09/best-discord-profile-pictures-7.png?resize=256%2C256&ssl=1";
@@ -45,10 +46,7 @@ export const CreateTuitField = () => {
   const dispatch = useAppDispatch()
 
   const onTuitButtonClicked = () => {
-    dispatch({
-      type: 'create-tuit',
-      tuit: text
-    })
+    createTuit(dispatch, {tuit: text})
   };
 
   const onTuitTextChanged = (e: React.ChangeEvent<HTMLTextAreaElement>) => {

@@ -4,6 +4,7 @@ import { makeStyles } from "@mui/styles";
 import EmbeddedVideoPlayer from "./EmbeddedVideoPlayer";
 import { StatsBar } from "./StatsBar";
 import { useAppDispatch } from "../../store";
+import { deleteTuit } from '../../reducers/actions/tuitsActions';
 
 // I'm lazy so instead of typing out the interface for a Tuit
 // like I should, I'll just infer the type from the list of starter
@@ -63,9 +64,9 @@ export const TuitListItem: React.FC<Props> = ({ tuit }) => {
   } = tuit;
   const classes = useStyles();
   const dispatch = useAppDispatch();
-  const deleteTuit = (tuit: any) => {
-    dispatch({ type: "delete-tuit", tuit });
-  };
+  // const deleteTuit = (tuit: any) => {
+  //   dispatch({ type: "delete-tuit", tuit });
+  // };
 
   return (
     <div className={classes.root}>
@@ -82,7 +83,8 @@ export const TuitListItem: React.FC<Props> = ({ tuit }) => {
           </div>
 
           <i
-            onClick={() => deleteTuit(tuit)}
+            onClick={() => deleteTuit(
+              dispatch, tuit)}
             className="fas fa-times"
           ></i>
         </div>

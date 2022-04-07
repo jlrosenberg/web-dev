@@ -31,7 +31,10 @@ const useStyles = makeStyles({
 export const StatsBar: React.FC<Props> = ({ stats, liked, tuit }) => {
   const classes = useStyles();
   const dispatch = useAppDispatch();
-  const { comments, retuits, likes } = stats;
+  // const { comments, retuits, likes } = stats;
+  const comments = stats?.comments
+  const retuits = stats?.retuits
+  const likes = stats?.likes
 
   const likeTuit = () => {
     dispatch({type: 'like-tuit', tuit});
