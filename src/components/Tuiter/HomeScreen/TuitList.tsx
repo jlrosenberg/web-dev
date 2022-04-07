@@ -9,6 +9,7 @@ export const TuitList = () => {
 
   useEffect(()=>{
     findAllTuits(dispatch)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <ul className="ttr-tuits list-group">
